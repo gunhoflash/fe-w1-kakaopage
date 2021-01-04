@@ -1,0 +1,46 @@
+header {
+    width: 100%;
+    height: 170px;
+    display: block;
+}
+
+#logo{
+    display: inline;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%);
+}
+#search-form{
+    position: fixed;
+    right:0px;
+    display: inline;
+}
+.nav-list{
+    text-align:center;
+    display: inline-block;
+    width: 15.9%;
+    height: 20px;
+}
+nav{
+    position:absolute;
+    left:50%;
+    transform:translate(-50%);
+    width:720px;
+}
+#carousel{
+    /* nav바로 아래에 오게끔 하는 더 좋은 방법? */
+    position:absolute; 
+    top:30%;
+    left:50%;
+    transform:translate(-50%);
+}
+body{
+    display: block;
+    background-color:rgb(230, 230, 250) ;
+}
+head{
+    width: 100%;
+    height: 40%;
+    display: block;
+    background-color:rgb(255, 255, 255) ;
+}
