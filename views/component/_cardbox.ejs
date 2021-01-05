@@ -1,0 +1,11 @@
+<!--
+{
+  id: string
+  cards: array of card
+}
+-->
+<div id="<%= id %>">
+  <% for (const card of cards) { %>
+    <%- include('_card', card) %>
+  <% } %>
+</div>

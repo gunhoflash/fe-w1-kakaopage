@@ -1,0 +1,23 @@
+<!--
+{
+  navTitle: string
+  navType: string
+  navList: [
+    {
+      text: string
+      target: string
+      selected: bool
+    }
+  ]
+}
+-->
+<nav class="container">
+  <ul class="d-flex">
+    <% for (const { text, target, selected } of navList) { %>
+    <li role="button" class="nav-item flex p-4"
+      data-nav="<%= navTitle %>" data-target="<%= target %>" data-selected="<%= selected %>">
+      <%= text %>
+    </li>
+    <% } %>
+  </ul>
+</nav>
