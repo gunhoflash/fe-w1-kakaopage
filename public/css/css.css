@@ -15,6 +15,10 @@ body {
   justify-content: center;
 }
 
+.flex {
+  flex: auto;
+}
+
 .d-inline {
   display: inline;
 }
@@ -83,6 +87,16 @@ body {
 
 /*
 
+  border
+
+*/
+
+.border-bottom {
+  border-bottom: 1px solid #dadada;
+}
+
+/*
+
   else
 
 */
@@ -90,6 +104,10 @@ body {
 
 .container {
   max-width: 40rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*
@@ -111,8 +129,10 @@ button, [role="button"] {
 
 */
 
-ul, ol {
+nav > ul, nav > ol {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /*
@@ -134,6 +154,7 @@ a {
 */
 
 .nav-item {
+  text-align: center;
   border-bottom: 2px solid transparent;
 }
 
