@@ -4,57 +4,36 @@
 <head>
     <title>홈 | 카카오페이지</title>
     <link rel="stylesheet" href="header.css" />
-    <header>
-        <h1 id="logo">
-            <img src="https://static-page.kakao.com/static/pc/mainLogo.png?cbbbd3f1a3ca7834cb8fc1adf0115a6c"
-                alt="kakaopage logo">
-        </h1>
-        <div id="search-form">
-            <input placeholder="" value="" maxlength="50" />
-            <img src="https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a">
-        </div>
-    </header>
+    <link rel="stylesheet" href="body.css" />
 
-    <div style="display: inline-block">
-        <nav>
-            <li class="nav-list"><a><img
-                        src="https://static-page.kakao.com/static/pc/menu_home.svg?fac7abe73b67dd1eb997d70a2c52d4d0"
-                        alt="홈"></a></li>
-            <li class="nav-list"><a><img
-                        src="https://static-page.kakao.com/static/pc/menu_toon.svg?42b75d406ec543b2fcf64e35287f0724"
-                        alt="웹툰/만화"></a></li>
-            <li class="nav-list"><a><img
-                        src="https://static-page.kakao.com/static/pc/menu_novel.svg?296e815be15f5e5edcdddb865f9863cd"
-                        alt="웹소설/장르"></a></li>
-            <li class="nav-list"><a><img
-                        src="https://static-page.kakao.com/static/pc/menu_vod.svg?0df7689ed8c083054bd9949aed77c589"
-                        alt="영화"></a></li>
-            <li class="nav-list"><a><img
-                        src="https://static-page.kakao.com/static/pc/menu_broadcast.svg?a6b4779526f1fa5dbeb1516607770b16"
-                        alt="예능/드라마"></a></li>
-            <li class="nav-list"><a><img
-                        src="https://static-page.kakao.com/static/pc/menu_book.svg?8fd0c5dc69d357fa23dd953d3b7e71aa"
-                        alt="책"></a></li>
-        </nav>
-    </div>
 </head>
 
 <body>
-    <div id="carousel">
-        <img class="main-carousel"
-            src="https://dn-img-page.kakao.com/download/resource?kid=S7z3V/hyLi8K3Mll/ZfpVxVOnv8CfGabZRKcIm1" alt="풍운객잔"
-            style="width: 720px; display: block;">
-        <img class="main-carousel"
-            src="https://dn-img-page.kakao.com/download/resource?kid=bNYyCI/hyQ9QRgie7/9MZeFENa3QlEgYFxK0Z9Bk"
-            alt="하트 받는 탑스타" style="width: 720px; display: block;">
-        <img class="main-carousel"
-            src="https://dn-img-page.kakao.com/download/resource?kid=t0GuV/hyQ9NmJPBH/S1t92QZ90dMKgAVNlwwQQ0"
-            alt="신을 삼킨 그림자" style="width: 720px; display: block;">
-        <img class="main-carousel"
-            src="https://dn-img-page.kakao.com/download/resource?kid=dV68p/hyORY5soHm/UrHkUlAvyQuE2lXTgkUk6K"
-            alt="악당만 취급합니다" style="width: 720px; display: block;">
+    <header>
+        <h1 id="logo">
+            <img id="logo-img"
+                src="https://static-page.kakao.com/static/pc/mainLogo.png?cbbbd3f1a3ca7834cb8fc1adf0115a6c"
+                alt="kakaopage logo">
+        </h1>
+
+        <div id="search-form">
+            <input placeholder="" value="" maxlength="50" />
+            <img id="search-btn"src="https://static-page.kakao.com/static/pc/btn_search.png?a8ce9e4eba0250e52d4570c605f79f9a"
+                style="">
+            <span style="font-family: sans-serif;color:rgb(153, 153, 153)">캐시충전</span>
+            <span style="font-family: sans-serif;color:rgb(153, 153, 153)">로그인</span>
+        </div>
+
+        <nav id="top-nav"></nav>
+    </header>
+
+    <div id="container">
+        <nav id="genre-nav"></nav>
+        <div id="carousel"></div>
     </div>
 
+    <script src="topNav.js"></script>
+    <script src="genreNav.js"></script>
     <script src="carousel.js"></script>
 </body>
 
