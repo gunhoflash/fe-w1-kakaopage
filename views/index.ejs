@@ -18,37 +18,30 @@
       </h1>
       <div class="d-flex p-absolute pr-4 right-0 h-100">
         <input type="text" name="search" id="input_search">
-        <button>캐시충전</button>
-        <span>|</span>
-        <button>로그인</button>
+        <button class="gray">캐시충전</button>
+        <span class="gray">|</span>
+        <button class="gray">로그인</button>
       </div>
     </div>
-    <nav class="container">
-      <ul class="d-flex">
-        <%
-          const navList = [
-            { text: '홈', target: '#section_empty', selected: false },
-            { text: '웹툰', target: '#section_webtoon', selected: true },
-            { text: '웹소설', target: '#section_empty', selected: false },
-            { text: '영화', target: '#section_empty', selected: false },
-            { text: '방송', target: '#section_empty', selected: false },
-            { text: '책', target: '#section_empty', selected: false },
-          ]
-          let selected = 'selected';
-          for (const { text, target, selected } of navList) {
-        %>
-          <li role="button" class="nav-item flex p-4"
-            data-nav="main" data-target="<%= target %>" data-selected="<%= selected %>">
-            <%= text %>
-          </li>
-        <% } %>
-      </ul>
-    </nav>
+    <%-
+      include('component/_nav', {
+        navTitle: 'nav_main',
+        navType: 1,
+        navList: [
+          { text: '홈', target: '#section_empty', selected: false },
+          { text: '웹툰', target: '#section_webtoon', selected: true },
+          { text: '웹소설', target: '#section_empty', selected: false },
+          { text: '영화', target: '#section_empty', selected: false },
+          { text: '방송', target: '#section_empty', selected: false },
+          { text: '책', target: '#section_empty', selected: false },
+        ]
+      })
+    %>
   </header>
 
   <div id="main_section" class="container">
-    <%- include('_webtoon'); -%>
-    <%- include('_empty'); -%>
+    <%- include('_webtoon'); %>
+    <%- include('_empty'); %>
   </div>
 
   <script src="js/js.js"></script>

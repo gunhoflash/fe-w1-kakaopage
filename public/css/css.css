@@ -81,6 +81,10 @@ body {
 
 */
 
+.gray {
+  color: #999999;
+}
+
 .bg-white {
   background-color: #fff;
 }
