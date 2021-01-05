@@ -11,43 +11,44 @@
 </head>
 
 <body class="bg-light">
-  <header class="pt-5 px-4 bg-white">
+  <header class="pt-5 bg-white border-bottom">
     <div class="d-flex p-relative">
       <h1 class="d-inline m-0">
         <a href="/">Kakaopage</a>
       </h1>
-      <div class="d-flex p-absolute right-0 h-100">
+      <div class="d-flex p-absolute pr-4 right-0 h-100">
         <input type="text" name="search" id="input_search">
         <button>캐시충전</button>
         <span>|</span>
         <button>로그인</button>
       </div>
     </div>
-    <nav>
+    <nav class="container">
       <ul class="d-flex">
         <%
-          const navList = ['홈', '웹툰', '웹소설', '영화', '방송', '책']
+          const navList = [
+            { text: '홈', target: '#section_empty', selected: false },
+            { text: '웹툰', target: '#section_webtoon', selected: true },
+            { text: '웹소설', target: '#section_empty', selected: false },
+            { text: '영화', target: '#section_empty', selected: false },
+            { text: '방송', target: '#section_empty', selected: false },
+            { text: '책', target: '#section_empty', selected: false },
+          ]
           let selected = 'selected';
-          for (const title of navList) {
+          for (const { text, target, selected } of navList) {
         %>
-          <li role="button" class="nav-item p-4" data-nav="main" <%= selected %>>
-            <%= title %>
+          <li role="button" class="nav-item flex p-4"
+            data-nav="main" data-target="<%= target %>" data-selected="<%= selected %>">
+            <%= text %>
           </li>
-        <%
-            selected = ''
-          }
-        %>
+        <% } %>
       </ul>
     </nav>
   </header>
 
   <div id="main_section" class="container">
-    <%- include('_home'); -%>
     <%- include('_webtoon'); -%>
-    <%- include('_webfiction'); -%>
-    <%- include('_movie'); -%>
-    <%- include('_broadcast'); -%>
-    <%- include('_book'); -%>
+    <%- include('_empty'); -%>
   </div>
 
   <script src="js/js.js"></script>

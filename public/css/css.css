@@ -9,6 +9,10 @@ body {
 
 */
 
+.d-none {
+  display: none !important;
+}
+
 .d-flex {
   display: flex;
   align-items: center;
@@ -158,6 +162,6 @@ a {
   border-bottom: 2px solid transparent;
 }
 
-.nav-item[selected] {
+.nav-item[data-selected='true'] {
   border-bottom: 2px solid #FFD500;
 }
