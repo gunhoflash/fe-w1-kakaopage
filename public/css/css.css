@@ -1,0 +1,142 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/*
+
+  display
+
+*/
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+/*
+
+  position
+
+*/
+
+.p-sticky {
+  position: sticky;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.right {
+  float: right;
+}
+
+/*
+
+  width and height
+
+*/
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+/*
+
+  color
+
+*/
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-light {
+  background-color: #eee;
+}
+
+/*
+
+  else
+
+*/
+
+
+.container {
+  max-width: 40rem;
+}
+
+/*
+
+  button
+
+*/
+
+button, [role="button"] {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem;
+}
+
+/*
+
+  list
+
+*/
+
+ul, ol {
+  list-style: none;
+}
+
+/*
+
+text
+
+*/
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/*
+
+  component
+
+*/
+
+.nav-item {
+  border-bottom: 2px solid transparent;
+}
+
+.nav-item[selected] {
+  border-bottom: 2px solid #FFD500;
+}
