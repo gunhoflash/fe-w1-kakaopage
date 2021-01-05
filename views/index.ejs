@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카카오페이지</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/css.css">
+  <link rel="stylesheet" href="css/scss.css">
+</head>
+
+<body class="bg-light">
+  <header class="pt-5 bg-white border-bottom">
+    <div class="d-flex p-relative">
+      <h1 class="d-inline m-0">
+        <a href="/">Kakaopage</a>
+      </h1>
+      <div class="d-flex p-absolute pr-4 right-0 h-100">
+        <input type="text" name="search" id="input_search">
+        <button class="gray">캐시충전</button>
+        <span class="gray">|</span>
+        <button class="gray">로그인</button>
+      </div>
+    </div>
+    <%-
+      include('component/_nav', {
+        navTitle: 'nav_main',
+        navType: 1,
+        navList: [
+          { text: '홈', target: '#section_empty', selected: false },
+          { text: '웹툰', target: '#section_webtoon', selected: true },
+          { text: '웹소설', target: '#section_empty', selected: false },
+          { text: '영화', target: '#section_empty', selected: false },
+          { text: '방송', target: '#section_empty', selected: false },
+          { text: '책', target: '#section_empty', selected: false },
+        ]
+      })
+    %>
+  </header>
+
+  <div id="main_section" class="container">
+    <%- include('_webtoon'); %>
+    <%- include('_empty'); %>
+  </div>
+
+  <script src="js/js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<div id="section_webtoon" class="d-none">
+  <%-
+    include('component/_nav', {
+      navTitle: 'nav_webtoon',
+      navType: 2,
+      navList: [
+        { text: '홈', target: 'section_webtoon_home', selected: true },
+        { text: '요일연재', target: 'section_webtoon_daily', selected: false },
+        { text: '웹툰', target: 'section_webtoon_webtoon', selected: false },
+        { text: '소년', target: 'section_webtoon_boy', selected: false },
+        { text: '드라마', target: 'section_webtoon_drama', selected: false },
+        { text: '로맨스', target: 'section_webtoon_romance', selected: false },
+        { text: '로판', target: 'section_webtoon_rofan', selected: false },
+        { text: '액션무협', target: 'section_webtoon_action', selected: false },
+        { text: 'BL/GL', target: 'section_webtoon_blgl', selected: false },
+      ]
+    })
+  %>
+  <%-
+    include('component/_box', {
+      title: 'test',
+      titleCount: 2021,
+      contents: []
+    })
+  %>
+</div>
