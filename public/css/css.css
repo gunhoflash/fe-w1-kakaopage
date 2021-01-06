@@ -163,7 +163,17 @@ img {
 
 */
 
+.nav {
+  background-color: white;
+}
+
+.nav-list {
+  display: flex;
+}
+
 .nav-item {
+  flex: auto;
+  padding: 1.5rem 0;
   text-align: center;
   border-bottom: 2px solid transparent;
 }
