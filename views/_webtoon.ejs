@@ -1,38 +1,103 @@
 <div id="section_webtoon" class="d-none">
   <%-
-    include('component/_', {
-      type: 'nav',
-      data: {
-      navTitle: 'nav_webtoon',
-      navType: 2,
-      navList: [
-          { text: '홈', target: '#section_webtoon_home', selected: true },
-          { text: '요일연재', target: '#section_webtoon_daily', selected: false },
-          { text: '웹툰', target: '#section_webtoon_webtoon', selected: false },
-          { text: '소년', target: '#section_webtoon_boy', selected: false },
-          { text: '드라마', target: '#section_webtoon_drama', selected: false },
-          { text: '로맨스', target: '#section_webtoon_romance', selected: false },
-          { text: '로판', target: '#section_webtoon_rofan', selected: false },
-          { text: '액션무협', target: '#section_webtoon_action', selected: false },
-          { text: 'BL/GL', target: '#section_webtoon_blgl', selected: false },
+  include('component/_', {
+    type: 'box',
+    data: {
+      noPadding: true,
+      components: [
+        {
+          type: 'nav',
+          data: {
+            navTitle: 'nav_webtoon',
+            navType: 2,
+            navList: [
+              { text: '홈', target: '#section_webtoon_home', selected: true },
+              { text: '요일연재', target: '#section_webtoon_daily', selected: false },
+              { text: '웹툰', target: '#section_webtoon_webtoon', selected: false },
+              { text: '소년', target: '#section_webtoon_boy', selected: false },
+              { text: '드라마', target: '#section_webtoon_drama', selected: false },
+              { text: '로맨스', target: '#section_webtoon_romance', selected: false },
+              { text: '로판', target: '#section_webtoon_rofan', selected: false },
+              { text: '액션무협', target: '#section_webtoon_action', selected: false },
+              { text: 'BL/GL', target: '#section_webtoon_blgl', selected: false },
+            ]
+          }
+        }
       ]
-      }
-    })
+    }
+  })
   %>
 
   <!-- Home -->
   <div id="section_webtoon_home">
-  <%-
+    <%-
     include('component/_', {
-      type: 'box',
-      data: {
-      title: 'test',
-      titleCount: 2021,
-        components: []
-      }
+      components: [
+        {
+          type: 'box',
+          data: {
+            noPadding: true,
+            components: [
+              {
+                type: 'carousel',
+                data: {}
+              }
+            ]
+          }
+        },
+        {
+          type: 'box',
+          data: {
+            components: [
+              {
+                type: 'quicklink',
+                data: {
+                  links: [
+                    { text: '오늘 UP', count: 179 },
+                    { text: '오늘 신작', count: 2 },
+                    { text: '오리지널', count: 1250 },
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          type: 'box',
+          data: {
+            components: []
+          }
+        },
+        {
+          type: 'box',
+          data: {
+            title: '요일연재 TOP',
+            titleCount: 1084,
+            components: [
+              {
+                type: 'nav',
+                data: {
+                  navTitle: 'nav_webtoon_home_daily_top',
+                  navType: 2,
+                  navList: [
+                    { text: '월', target: '#section_webtoon_home_daily_top_mon', selected: true },
+                    { text: '화', target: '#section_webtoon_home_daily_top_tue', selected: false },
+                    { text: '수', target: '#section_webtoon_home_daily_top_wed', selected: false },
+                    { text: '목', target: '#section_webtoon_home_daily_top_thu', selected: false },
+                    { text: '금', target: '#section_webtoon_home_daily_top_fri', selected: false },
+                    { text: '토', target: '#section_webtoon_home_daily_top_sat', selected: false },
+                    { text: '일', target: '#section_webtoon_home_daily_top_sun', selected: false },
+                    { text: '완결', target: '#section_webtoon_home_daily_top_end', selected: false },
+                  ]
+                }
+              }
+            ]
+          }
+        },
+      ]
     })
-  %>
-</div>
+    %>
+  </div>
 
   <!-- Daily -->
   <div id="section_webtoon_daily">
