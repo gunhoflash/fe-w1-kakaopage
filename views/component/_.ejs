@@ -1,0 +1,19 @@
+<!-- 
+{
+  type: string
+  data: json
+}
+or
+{
+  components: array of above
+}
+-->
+<% if (typeof type !== 'undefined' && typeof data !== 'undefined') { %>
+  <!-- single component -->
+  <%- include(`_${type}`, data) %>
+<% } else if (typeof components !== 'undefined') { %>
+  <!-- multiple components -->
+  <% for (const { type, data } of components) { %>
+    <%- include(`_${type}`, data) %>
+  <% } %>
+<% } %>
