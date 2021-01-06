@@ -20,7 +20,7 @@
   <% } %>
 
   <!-- components -->
-  <% if (components.length) { %>
+  <% if (typeof components !== 'undefined') { %>
     <%- include('_', { components: components }) %>
   <% } %>
 </div>
