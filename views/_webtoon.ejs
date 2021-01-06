@@ -6,19 +6,22 @@
       navTitle: 'nav_webtoon',
       navType: 2,
       navList: [
-        { text: '홈', target: 'section_webtoon_home', selected: true },
-        { text: '요일연재', target: 'section_webtoon_daily', selected: false },
-        { text: '웹툰', target: 'section_webtoon_webtoon', selected: false },
-        { text: '소년', target: 'section_webtoon_boy', selected: false },
-        { text: '드라마', target: 'section_webtoon_drama', selected: false },
-        { text: '로맨스', target: 'section_webtoon_romance', selected: false },
-        { text: '로판', target: 'section_webtoon_rofan', selected: false },
-        { text: '액션무협', target: 'section_webtoon_action', selected: false },
-        { text: 'BL/GL', target: 'section_webtoon_blgl', selected: false },
+          { text: '홈', target: '#section_webtoon_home', selected: true },
+          { text: '요일연재', target: '#section_webtoon_daily', selected: false },
+          { text: '웹툰', target: '#section_webtoon_webtoon', selected: false },
+          { text: '소년', target: '#section_webtoon_boy', selected: false },
+          { text: '드라마', target: '#section_webtoon_drama', selected: false },
+          { text: '로맨스', target: '#section_webtoon_romance', selected: false },
+          { text: '로판', target: '#section_webtoon_rofan', selected: false },
+          { text: '액션무협', target: '#section_webtoon_action', selected: false },
+          { text: 'BL/GL', target: '#section_webtoon_blgl', selected: false },
       ]
       }
     })
   %>
+
+  <!-- Home -->
+  <div id="section_webtoon_home">
   <%-
     include('component/_', {
       type: 'box',
@@ -29,4 +32,45 @@
       }
     })
   %>
+</div>
+
+  <!-- Daily -->
+  <div id="section_webtoon_daily">
+
+  </div>
+
+  <!-- Webtoon -->
+  <div id="section_webtoon_webtoon">
+
+  </div>
+
+  <!-- Boy -->
+  <div id="section_webtoon_boy">
+
+  </div>
+
+  <!-- Drama -->
+  <div id="section_webtoon_drama">
+
+  </div>
+
+  <!-- Romance -->
+  <div id="section_webtoon_romance">
+
+  </div>
+
+  <!-- Rofan -->
+  <div id="section_webtoon_rofan">
+
+  </div>
+
+  <!-- Action -->
+  <div id="section_webtoon_action">
+
+  </div>
+
+  <!-- BL / GL -->
+  <div id="section_webtoon_blgl">
+
+  </div>
 </div>
