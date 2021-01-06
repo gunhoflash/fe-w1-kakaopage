@@ -3,12 +3,11 @@
 {
   title: string
   titleCount: integer or undefined
-  nav: nav or undefined
-  contents: array of cardbox
+  components: array of _
 }
 
 -->
-<div class="bg-white my-1 p-3 w-100">
+<div class="bg-white my-1 p-3">
   <!-- header -->
   <div class="d-flex">
     <h2><%= title %></h2>
@@ -18,13 +17,8 @@
     <button class="ml-auto gray">더보기 &GT;</button>
   </div>
 
-  <!-- nav -->
-  <% if (typeof nav !== 'undefined') { %>
-    <%- include('_nav', nav) %>
-  <% } %>
-
-  <!-- contents -->
-  <% for (const cardBox in contents) { %>
-    <%- include('_cardbox', cardBox) %>
+  <!-- components -->
+  <% if (components.length) { %>
+    <%- include('_', { components: components }) %>
   <% } %>
 </div>

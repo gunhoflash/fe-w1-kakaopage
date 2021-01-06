@@ -24,17 +24,20 @@
       </div>
     </div>
     <%-
-      include('component/_nav', {
-        navTitle: 'nav_main',
-        navType: 1,
-        navList: [
-          { text: '홈', target: '#section_empty', selected: false },
-          { text: '웹툰', target: '#section_webtoon', selected: true },
-          { text: '웹소설', target: '#section_empty', selected: false },
-          { text: '영화', target: '#section_empty', selected: false },
-          { text: '방송', target: '#section_empty', selected: false },
-          { text: '책', target: '#section_empty', selected: false },
-        ]
+      include('component/_', {
+        type: 'nav',
+        data: {
+          navTitle: 'nav_main',
+          navType: 1,
+          navList: [
+            { text: '홈', target: '#section_empty', selected: false },
+            { text: '웹툰', target: '#section_webtoon', selected: true },
+            { text: '웹소설', target: '#section_empty', selected: false },
+            { text: '영화', target: '#section_empty', selected: false },
+            { text: '방송', target: '#section_empty', selected: false },
+            { text: '책', target: '#section_empty', selected: false },
+          ]
+        }
       })
     %>
   </header>

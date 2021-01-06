@@ -1,6 +1,8 @@
 <div id="section_webtoon" class="d-none">
   <%-
-    include('component/_nav', {
+    include('component/_', {
+      type: 'nav',
+      data: {
       navTitle: 'nav_webtoon',
       navType: 2,
       navList: [
@@ -14,13 +16,17 @@
         { text: '액션무협', target: 'section_webtoon_action', selected: false },
         { text: 'BL/GL', target: 'section_webtoon_blgl', selected: false },
       ]
+      }
     })
   %>
   <%-
-    include('component/_box', {
+    include('component/_', {
+      type: 'box',
+      data: {
       title: 'test',
       titleCount: 2021,
-      contents: []
+        components: []
+      }
     })
   %>
 </div>
