@@ -3,11 +3,12 @@
 {
   title: string or undefined
   titleCount: integer or undefined
+  noPadding: true or undefined
   components: array of _
 }
 
 -->
-<div class="box">
+<div class="box <%= (typeof noPadding !== 'undefined' ? 'p-0' : '') %>">
   <!-- header -->
   <% if (typeof title !== 'undefined') { %>
   <div class="d-flex">
