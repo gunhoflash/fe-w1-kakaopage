@@ -1,4 +1,4 @@
-$size: (
+$spaces: (
   "0": 0,
   "1": 0.25rem,
   "2": 0.5rem,
@@ -8,7 +8,16 @@ $size: (
   "auto": auto,
 );
 
-@each $k, $v in $size {
+$sizes: (
+  "0": 0%,
+  "20": 20%,
+  "33": 33.33333333333333%,
+  "50": 50%,
+  "100": 100%,
+  "auto": auto,
+);
+
+@each $k, $v in $spaces {
   .p-#{$k} {
     padding: $v !important;
   }
@@ -55,5 +64,14 @@ $size: (
   }
   .mr-#{$k} {
     margin-right: $v !important;
+  }
+}
+
+@each $k, $v in $sizes {
+  .w-#{$k} {
+    width: $v !important;
+  }
+  .h-#{$k} {
+    width: $v !important;
   }
 }
