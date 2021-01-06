@@ -1,30 +1,27 @@
-<!-- 
+<!--
 
 {
-  title: string
+  title: string or undefined
   titleCount: integer or undefined
-  nav: nav or undefined
-  contents: array of cardbox
+  noPadding: true or undefined
+  components: array of _
 }
 
 -->
-<div class="bg-white my-1 p-3 w-100">
+<div class="box <%= (typeof noPadding !== 'undefined' ? 'p-0' : '') %>">
   <!-- header -->
+  <% if (typeof title !== 'undefined') { %>
   <div class="d-flex">
-    <h2><%= title %></h2>
+    <h2 class="m-0"><%= title %></h2>
     <% if (typeof titleCount !== 'undefined') { %>
-    <small class="gray">(<%= titleCount %>)</small>
+    <small class="ml-1 gray">(<%= titleCount %>)</small>
     <% } %>
-    <button class="ml-auto gray">더보기 &GT;</button>
+    <button class="px-0 ml-auto gray">더보기 &GT;</button>
   </div>
-
-  <!-- nav -->
-  <% if (typeof nav !== 'undefined') { %>
-    <%- include('_nav', nav) %>
   <% } %>
 
-  <!-- contents -->
-  <% for (const cardBox in contents) { %>
-    <%- include('_cardbox', cardBox) %>
+  <!-- components -->
+  <% if (typeof components !== 'undefined') { %>
+    <%- include('_', { components: components }) %>
   <% } %>
 </div>

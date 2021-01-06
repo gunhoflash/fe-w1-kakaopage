@@ -1,0 +1,20 @@
+<!--
+{
+  links: [
+    {
+      text: string
+      count: integer of undefined
+    }
+  ]
+}
+-->
+<div class="quicklink">
+  <% for (const { text, count } of links) { %>
+  <div class="quicklink-item">
+    <%= text %>
+    <% if (typeof count !== 'undefined') { %>
+    <span class="ml-1 pill-yellow"><%= count %></span>
+    <% } %>
+  </div>
+  <% } %>
+</div>

@@ -1,59 +1,77 @@
-$size: (
-	"0": 0,
-	"1": 0.25rem,
-	"2": 0.5rem,
-	"3": 1rem,
-	"4": 1.5rem,
-	"5": 2rem,
-	"auto": auto,
+$spaces: (
+  "0": 0,
+  "1": 0.25rem,
+  "2": 0.5rem,
+  "3": 1rem,
+  "4": 1.5rem,
+  "5": 2rem,
+  "auto": auto,
 );
 
-@each $k, $v in $size {
-	.p-#{$k} {
-		padding: $v !important;
-	}
-	.py-#{$k} {
-		padding-top: $v !important;
-		padding-bottom: $v !important;
-	}
-	.px-#{$k} {
-		padding-left: $v !important;
-		padding-right: $v !important;
-	}
-	.pt-#{$k} {
-		padding-top: $v !important;
-	}
-	.pb-#{$k} {
-		padding-bottom: $v !important;
-	}
-	.pl-#{$k} {
-		padding-left: $v !important;
-	}
-	.pr-#{$k} {
-		padding-right: $v !important;
-	}
+$sizes: (
+  "0": 0%,
+  "20": 20%,
+  "33": 33.33333333333333%,
+  "50": 50%,
+  "100": 100%,
+  "auto": auto,
+);
 
-	.m-#{$k} {
-		margin: $v !important;
-	}
-	.my-#{$k} {
-		margin-top: $v !important;
-		margin-bottom: $v !important;
-	}
-	.mx-#{$k} {
-		margin-left: $v !important;
-		margin-right: $v !important;
-	}
-	.mt-#{$k} {
-		margin-top: $v !important;
-	}
-	.mb-#{$k} {
-		margin-bottom: $v !important;
-	}
-	.ml-#{$k} {
-		margin-left: $v !important;
-	}
-	.mr-#{$k} {
-		margin-right: $v !important;
-	}
+@each $k, $v in $spaces {
+  .p-#{$k} {
+    padding: $v !important;
+  }
+  .py-#{$k} {
+    padding-top: $v !important;
+    padding-bottom: $v !important;
+  }
+  .px-#{$k} {
+    padding-left: $v !important;
+    padding-right: $v !important;
+  }
+  .pt-#{$k} {
+    padding-top: $v !important;
+  }
+  .pb-#{$k} {
+    padding-bottom: $v !important;
+  }
+  .pl-#{$k} {
+    padding-left: $v !important;
+  }
+  .pr-#{$k} {
+    padding-right: $v !important;
+  }
+
+  .m-#{$k} {
+    margin: $v !important;
+  }
+  .my-#{$k} {
+    margin-top: $v !important;
+    margin-bottom: $v !important;
+  }
+  .mx-#{$k} {
+    margin-left: $v !important;
+    margin-right: $v !important;
+  }
+  .mt-#{$k} {
+    margin-top: $v !important;
+  }
+  .mb-#{$k} {
+    margin-bottom: $v !important;
+  }
+  .ml-#{$k} {
+    margin-left: $v !important;
+  }
+  .mr-#{$k} {
+    margin-right: $v !important;
+  }
+}
+
+@each $k, $v in $sizes {
+  .w-#{$k} {
+    width: $v !important;
+  }
+  .h-#{$k} {
+    width: $v !important;
+  }
 }
