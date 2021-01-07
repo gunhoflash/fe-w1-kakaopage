@@ -437,14 +437,14 @@
                   navTitle: 'nav_webtoon_daily_day',
                   navType: 4,
                   navList: [
-                    { text: '월', target: '.webtoon_daily_mon', selected: true },
-                    { text: '화', target: '.webtoon_daily_tue', selected: false },
-                    { text: '수', target: '.webtoon_daily_wed', selected: false },
-                    { text: '목', target: '.webtoon_daily_thu', selected: false },
-                    { text: '금', target: '.webtoon_daily_fri', selected: false },
-                    { text: '토', target: '.webtoon_daily_sat', selected: false },
-                    { text: '일', target: '.webtoon_daily_sun', selected: false },
-                    { text: '완결', target: '.webtoon_daily_end', selected: false },
+                    { text: '월', target: '#cardbox_webtoon_daily_main .webtoon_daily_mon', selected: true },
+                    { text: '화', target: '#cardbox_webtoon_daily_main .webtoon_daily_tue', selected: false },
+                    { text: '수', target: '#cardbox_webtoon_daily_main .webtoon_daily_wed', selected: false },
+                    { text: '목', target: '#cardbox_webtoon_daily_main .webtoon_daily_thu', selected: false },
+                    { text: '금', target: '#cardbox_webtoon_daily_main .webtoon_daily_fri', selected: false },
+                    { text: '토', target: '#cardbox_webtoon_daily_main .webtoon_daily_sat', selected: false },
+                    { text: '일', target: '#cardbox_webtoon_daily_main .webtoon_daily_sun', selected: false },
+                    { text: '완결', target: '#cardbox_webtoon_daily_main .webtoon_daily_end', selected: false },
                   ]
                 }
               },
@@ -454,15 +454,16 @@
                   navTitle: 'nav_webtoon_daily_type',
                   navType: 4,
                   navList: [
-                    { text: '전체', target: '.webtoon_daily_all', selected: true },
-                    { text: '웹툰', target: '.webtoon_daily_webtoon', selected: false },
-                    { text: '(시계)웹툰', target: '.webtoon_daily_time', selected: false },
+                    { text: '전체', target: '#cardbox_webtoon_daily_main .card', selected: true },
+                    { text: '웹툰', target: '#cardbox_webtoon_daily_main .card[data-webtoon-type="webtoon"]', selected: false },
+                    { text: '(시계)웹툰', target: '#cardbox_webtoon_daily_main .card[data-webtoon-type="time"]', selected: false },
                   ]
                 }
               },
               {
                 type: 'cardbox',
                 data: {
+                  id: 'cardbox_webtoon_daily_main',
                   cards: [
                     { cardType: 1, img: 'card1_1.png', title: '지구의 주인은 고양이다', view: '38.4', top: 'TOP', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
                     { cardType: 1, img: 'card1_1.png', title: '지구의 주인은 고양이다', view: '38.4', top: 'TOP', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
