@@ -523,6 +523,64 @@
             ]
           }
         },
+        {
+          type: 'box',
+          data: {
+            components: [
+              {
+                type: 'nav',
+                data: {
+                  navTitle: 'nav_webtoon_webtoon_day',
+                  navType: 4,
+                  navList: [
+                    { text: '월', target: '#cardbox_webtoon_webtoon_main .webtoon_daily_mon', selected: true },
+                    { text: '화', target: '#cardbox_webtoon_webtoon_main .webtoon_daily_tue', selected: false },
+                    { text: '수', target: '#cardbox_webtoon_webtoon_main .webtoon_daily_wed', selected: false },
+                    { text: '목', target: '#cardbox_webtoon_webtoon_main .webtoon_daily_thu', selected: false },
+                    { text: '금', target: '#cardbox_webtoon_webtoon_main .webtoon_daily_fri', selected: false },
+                    { text: '토', target: '#cardbox_webtoon_webtoon_main .webtoon_daily_sat', selected: false },
+                    { text: '일', target: '#cardbox_webtoon_webtoon_main .webtoon_daily_sun', selected: false },
+                    { text: '전체', target: '#cardbox_webtoon_webtoon_main .card', selected: false },
+                  ]
+                }
+              },
+              {
+                type: 'cardbox',
+                data: {
+                  id: 'cardbox_webtoon_webtoon_main',
+                  cards: [
+                    { cardType: 2, img: 'card2_1.png', title: '지구의 주인은 고양이다', subtitle: '길냥이들의 지구 정복기!!', view: '38.4', days: ['mon', 'wed', 'fri', 'sun'] },
+                    { cardType: 2, img: 'card2_2.png', title: '넘 많은 고양!', subtitle: '있잖아, 난 고양이 7마리 있따아~', view: '8.6', days: ['tue', 'thu', 'sat'] },
+                    { cardType: 2, img: 'card2_3.png', title: '웽툰', subtitle: '바보짓은 웽 때문이야!', view: '10', days: ['mon', 'tue', 'wed', 'sun'] },
+                    { cardType: 2, img: 'card2_1.png', title: '지구의 주인은 고양이다', subtitle: '길냥이들의 지구 정복기!!', view: '38.4', days: ['tue', 'thu', 'sat'] },
+                    { cardType: 2, img: 'card2_2.png', title: '넘 많은 고양!', subtitle: '있잖아, 난 고양이 7마리 있따아~', view: '8.6', days: ['mon', 'tue', 'wed', 'fri', 'sun'] },
+                    { cardType: 2, img: 'card2_3.png', title: '웽툰', subtitle: '바보짓은 웽 때문이야!', view: '10', days: ['wed', 'thu', 'fri', 'sat'] },
+                    { cardType: 2, img: 'card2_1.png', title: '지구의 주인은 고양이다', subtitle: '길냥이들의 지구 정복기!!', view: '38.4', days: ['mon', 'fri', 'sun'] },
+                    { cardType: 2, img: 'card2_2.png', title: '넘 많은 고양!', subtitle: '있잖아, 난 고양이 7마리 있따아~', view: '8.6', days: ['thu', 'sat'] },
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          type: 'box',
+          data: {
+            title: '이달의 HOT한 신작!',
+            components: [
+              {
+                type: 'cardbox',
+                data: {
+                  cards: [
+                    { cardType: 2, img: 'card2_1.png', title: '지구의 주인은 고양이다', subtitle: '길냥이들의 지구 정복기!!', view: '38.4' },
+                    { cardType: 2, img: 'card2_2.png', title: '넘 많은 고양!', subtitle: '있잖아, 난 고양이 7마리 있따아~', view: '8.6' },
+                    { cardType: 2, img: 'card2_3.png', title: '웽툰', subtitle: '바보짓은 웽 때문이야!', view: '10' },
+                  ]
+                }
+              }
+            ]
+          }
+        }
       ]
     })
     %>
