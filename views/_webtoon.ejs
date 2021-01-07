@@ -412,7 +412,98 @@
 
   <!-- Daily -->
   <div id="section_webtoon_daily">
-
+    <%-
+    include('component/_', {
+      components: [
+        {
+          type: 'box',
+          data: {
+            noPadding: true,
+            components: [
+              {
+                type: 'carousel',
+                data: {}
+              }
+            ]
+          }
+        },
+        {
+          type: 'box',
+          data: {
+            components: [
+              {
+                type: 'nav',
+                data: {
+                  navTitle: 'nav_webtoon_daily_day',
+                  navType: 4,
+                  navList: [
+                    { text: '월', target: '.webtoon_daily_mon', selected: true },
+                    { text: '화', target: '.webtoon_daily_tue', selected: false },
+                    { text: '수', target: '.webtoon_daily_wed', selected: false },
+                    { text: '목', target: '.webtoon_daily_thu', selected: false },
+                    { text: '금', target: '.webtoon_daily_fri', selected: false },
+                    { text: '토', target: '.webtoon_daily_sat', selected: false },
+                    { text: '일', target: '.webtoon_daily_sun', selected: false },
+                    { text: '완결', target: '.webtoon_daily_end', selected: false },
+                  ]
+                }
+              },
+              {
+                type: 'nav',
+                data: {
+                  navTitle: 'nav_webtoon_daily_type',
+                  navType: 4,
+                  navList: [
+                    { text: '전체', target: '.webtoon_daily_all', selected: true },
+                    { text: '웹툰', target: '.webtoon_daily_webtoon', selected: false },
+                    { text: '(시계)웹툰', target: '.webtoon_daily_time', selected: false },
+                  ]
+                }
+              },
+              {
+                type: 'cardbox',
+                data: {
+                  cards: [
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: 'TOP', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: 'TOP', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: 'TOP', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: 'TOP', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: 'TOP', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '1위', days: ['mon', 'thu', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '1위', days: ['tue', 'sat'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '1위', days: ['wed', 'fri', 'sun'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '2위', days: ['mon', 'sat', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '2위', days: ['tue', 'sun'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '2위', days: ['wed', 'thu', 'fri'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '3위', days: ['mon', 'wed', 'fri'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '3위', days: ['tue', 'thu'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '3위', days: ['sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '4위', days: ['mon', 'tue', 'fri'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '4위', days: ['wed', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '4위', days: ['thu', 'sat'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '5위', days: ['mon', 'wed', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '5위', days: ['tue', 'thu', 'sun'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', top: '5위', days: ['fri', 'sat'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', rating: '10.0', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', rating: '9.9', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', rating: '9.8', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', rating: '9.7', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', rating: '9.6', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', rating: '9.5', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', rating: '9.4', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', rating: '9.3', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', rating: '9.2', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', rating: '9.1', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                    { cardType: 1, img: 'card1.png', title: '지구의 주인은 고양이다', view: '38.4', rating: '9.0', days: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'end'] },
+                  ]
+                }
+              }
+            ]
+          }
+        },
+      ]
+    })
+    %>
   </div>
 
   <!-- Webtoon -->
