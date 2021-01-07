@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -11,6 +15,10 @@ body {
 
 .d-none {
   display: none !important;
+}
+
+.d-block {
+  display: block;
 }
 
 .d-flex {
@@ -53,6 +61,14 @@ body {
   top: 0;
 }
 
+.bottom-0 {
+  bottom: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
 .right-0 {
   right: 0;
 }
@@ -67,16 +83,32 @@ body {
 
 */
 
+.white {
+  color: white;
+}
+
 .gray {
   color: #999999;
+}
+
+.yellow {
+  color: #FFD500;
 }
 
 .bg-white {
   background-color: #fff;
 }
 
+.bg-dark {
+  background-color: #242526;
+}
+
 .bg-light {
   background-color: #eee;
+}
+
+.bg-yellow {
+  background-color: #FFD500;
 }
 
 .pill-yellow {
@@ -95,12 +127,16 @@ body {
   border-bottom: 1px solid #dadada;
 }
 
+.border-rounded {
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
 /*
 
   else
 
 */
-
 
 .container {
   max-width: 48rem;
@@ -108,6 +144,17 @@ body {
   padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+/*
+
+  input
+
+*/
+input {
+  border-radius: 50rem;
+  border: 1px solid #dadada;
+  padding: 0.5rem 1rem;
 }
 
 /*
@@ -144,6 +191,16 @@ text
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /*
@@ -187,6 +244,18 @@ img {
   border-bottom: 1px solid #E6E6E6;
   padding: 1rem;
   margin-top: 0.75rem;
+}
+
+.cardbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0.5rem -0.5rem 0 -0.5rem;
+}
+
+.cardbox .card {
+  padding: 0 0.5rem;
+  margin: 0.5rem auto;
 }
 
 .carousel {

@@ -10,6 +10,7 @@ $spaces: (
 
 $sizes: (
   "0": 0%,
+  "10": 10%,
   "20": 20%,
   "33": 33.33333333333333%,
   "50": 50%,
@@ -72,6 +73,6 @@ $sizes: (
     width: $v !important;
   }
   .h-#{$k} {
-    width: $v !important;
+    height: $v !important;
   }
 }

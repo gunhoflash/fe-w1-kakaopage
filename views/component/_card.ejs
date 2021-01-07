@@ -1,9 +1,110 @@
 <!--
 {
-  cardType: string
-  ...
+  cardType: integer
+    1: basic vertical (5 in a row)
+    2: basic horizontal (1 in a row)
+    3: listed horizontal (1 in a row)
+    4
+    5: yellow bottom (2 in a row)
+  listOrder: integer or undefined
+  img: string
+  title: string
+  subtitle: string or undefined
+  view: string
+  rating: number or undefined
+  top: string or undefined
+  badge: array of string
+
+  days: array of string or undefined
+    mon, tue, wed, thu, fri, sat, sun, end
+  webtoonType: string or undefined
+    webtoon, time
 }
 -->
-<div class="bg-light">
-  type: <%= cardType %>
+<%
+let yellowText = '';
+if (typeof rating !== 'undefined') {
+  yellowText = `★${rating}`;
+} else if (typeof top !== 'undefined') {
+  yellowText = top;
+}
+
+if (typeof subtitle === 'undefined') {
+  subtitle = ''
+}
+
+let _days = ''
+if (typeof days !== 'undefined') {
+  for (const day of days) {
+    _days += ` webtoon_daily_${day}`
+  }
+}
+let _webtoonType = ''
+if (typeof webtoonType !== 'undefined') {
+  _webtoonType = webtoonType
+}
+%>
+
+<!-- type 1 -->
+<% if (cardType === 1) { %>
+<div class="card w-20 <%= _days %>" data-webtoon-type="<%= _webtoonType %>">
+  <div class="border-rounded">
+    <img src="img/<%= img %>" alt="<%= title %> 이미지">
+    <div class="yellow bg-dark py-1 px-2"><%= yellowText %></div>
+  </div>
+  <h3 class="text-ellipsis my-2"><%= title %></h3>
+  <small class="gray"><%= view %>만명</small>
 </div>
+<% } %>
+
+<!-- type 2 -->
+<% if (cardType === 2) { %>
+<div class="card d-flex w-100 <%= _days %>" data-webtoon-type="<%= _webtoonType %>">
+  <div class="border-rounded w-20">
+    <img src="img/<%= img %>" alt="<%= title %> 이미지">
+  </div>
+  <div class="flex ml-3">
+    <h3 class="text-ellipsis my-2"><%= title %></h3>
+    <small class="gray">
+      <div class="mb-3"><%= subtitle %></div>
+      <div><%= view %>만명 %></div>
+    </small>
+  </div>
+</div>
+<% } %>
+
+<!-- type 3 -->
+<% if (cardType === 3) { %>
+<div class="card d-flex w-100">
+  <div class="w-10 text-center">
+    <strong><%= listOrder %></strong>
+  </div>
+  <div class="border-rounded w-20">
+    <img src="img/<%= img %>" alt="<%= title %> 이미지">
+  </div>
+  <div class="flex ml-3">
+    <h3 class="text-ellipsis my-2"><%= title %></h3>
+    <small class="gray"><%= view %>만명</small>
+  </div>
+</div>
+<% } %>
+
+<!-- type 2 -->
+<% if (cardType === 5) { %>
+<div class="card w-50">
+  <div class="border-rounded p-relative">
+    <img src="img/<%= img %>" alt="<%= title %> 이미지" class="">
+    <div class="p-absolute bottom-0 w-100">
+      <div class="white px-3 mb-3">
+        <h3 class="mb-1"><%= title %></h3>
+        <small>
+          <small class="yellow bg-dark p-1"><%= yellowText %></small>
+          <span>|</span>
+          <span><%= view %>만명</span>
+        </small>
+      </div>
+      <small class="d-block bg-yellow text-center py-1"><%= subtitle %></small>
+    </div>
+  </div>
+</div>
+<% } %>
