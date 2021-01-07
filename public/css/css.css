@@ -17,6 +17,10 @@ body {
   display: none !important;
 }
 
+.d-block {
+  display: block;
+}
+
 .d-flex {
   display: flex;
   align-items: center;
@@ -79,16 +83,32 @@ body {
 
 */
 
+.white {
+  color: white;
+}
+
 .gray {
   color: #999999;
+}
+
+.yellow {
+  color: #FFD500;
 }
 
 .bg-white {
   background-color: #fff;
 }
 
+.bg-dark {
+  background-color: #242526;
+}
+
 .bg-light {
   background-color: #eee;
+}
+
+.bg-yellow {
+  background-color: #FFD500;
 }
 
 .pill-yellow {
@@ -163,6 +183,16 @@ a {
   color: inherit;
 }
 
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-center {
+  text-align: center;
+}
+
 /*
 
 image
@@ -210,11 +240,12 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 -0.5rem;
+  margin: 1rem -0.5rem 0 -0.5rem;
 }
 
 .cardbox .card {
   padding: 0 0.5rem;
+  margin: 0.5rem auto;
 }
 
 .carousel {

@@ -8,28 +8,54 @@
     5: yellow bottom (2 in a row)
   img: string
   title: string
-  subtitle: string
+  subtitle: string or undefined
   view: string
-  rating: number
+  rating: number or undefined
+  top: string or undefined
   badge: array of string
 }
 -->
+<%
+let yellowText = '';
+if (typeof rating !== 'undefined') {
+  yellowText = `★${rating}`;
+} else if (typeof top !== 'undefined') {
+  yellowText = top;
+}
+
+if (typeof subtitle === 'undefined') {
+  subtitle = ''
+}
+%>
+
+<!-- type 1 -->
 <% if (cardType === 1) { %>
 <div class="card w-20">
   <div class="border-rounded">
     <img src="img/<%= img %>" alt="<%= title %> 이미지">
+    <div class="yellow bg-dark py-1 px-2"><%= yellowText %></div>
   </div>
-  <h3><%= title %></h3>
+  <h3 class="text-ellipsis my-2"><%= title %></h3>
+  <small class="gray"><%= view %>만명</small>
 </div>
 <% } %>
 
+<!-- type 2 -->
 <% if (cardType === 5) { %>
-<div class="card w-50 p-relative">
-  <div class="border-rounded">
+<div class="card w-50">
+  <div class="border-rounded p-relative">
     <img src="img/<%= img %>" alt="<%= title %> 이미지" class="">
-  </div>
-  <div class="p-absolute bottom-0">
-    <h3><%= title %></h3>
+    <div class="p-absolute bottom-0 w-100">
+      <div class="white px-3 mb-3">
+        <h3 class="mb-1"><%= title %></h3>
+        <small>
+          <small class="yellow bg-dark p-1"><%= yellowText %></small>
+          <span>|</span>
+          <span><%= view %>만명</span>
+        </small>
+      </div>
+      <small class="d-block bg-yellow text-center py-1"><%= subtitle %></small>
+    </div>
   </div>
 </div>
 <% } %>
