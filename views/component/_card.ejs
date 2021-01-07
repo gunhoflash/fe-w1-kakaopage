@@ -14,6 +14,11 @@
   rating: number or undefined
   top: string or undefined
   badge: array of string
+
+  days: array of string or undefined
+    mon, tue, wed, thu, fri, sat, sun, end
+  webtoonType: string or undefined
+    webtoon, time
 }
 -->
 <%
@@ -27,11 +32,22 @@ if (typeof rating !== 'undefined') {
 if (typeof subtitle === 'undefined') {
   subtitle = ''
 }
+
+let _days = ''
+if (typeof days !== 'undefined') {
+  for (const day of days) {
+    _days += ` webtoon_daily_${day}`
+  }
+}
+let _webtoonType = ''
+if (typeof webtoonType !== 'undefined') {
+  _webtoonType = webtoonType
+}
 %>
 
 <!-- type 1 -->
 <% if (cardType === 1) { %>
-<div class="card w-20">
+<div class="card w-20 <%= _days %>" data-webtoon-type="<%= _webtoonType %>">
   <div class="border-rounded">
     <img src="img/<%= img %>" alt="<%= title %> 이미지">
     <div class="yellow bg-dark py-1 px-2"><%= yellowText %></div>
