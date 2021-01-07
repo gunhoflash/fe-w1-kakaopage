@@ -5,7 +5,9 @@
 }
 -->
 <div id="<%= typeof id !== 'undefined' ? id : '' %>" class="cardbox">
+  <% let listOrder = 1 %>
   <% for (const card of cards) { %>
-    <%- include('_card', card) %>
+    <%- include('_card', { ...card, listOrder }) %>
+    <% listOrder++ %>
   <% } %>
 </div>
