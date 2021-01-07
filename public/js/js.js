@@ -1,7 +1,3 @@
-setTimeout(() => {
-  location.href = ''
-}, 5000);
-
 /*
 
   common functions
