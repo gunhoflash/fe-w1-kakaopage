@@ -1,9 +1,35 @@
 <!--
 {
-  cardType: string
-  ...
+  cardType: integer
+    1: basic vertical (5 in a row)
+    2: basic horizontal (1 in a row)
+    3
+    4
+    5: yellow bottom (2 in a row)
+  img: string
+  title: string
+  subtitle: string
+  view: string
+  rating: number
+  badge: array of string
 }
 -->
-<div class="bg-light">
-  type: <%= cardType %>
+<% if (cardType === 1) { %>
+<div class="card w-20">
+  <div class="border-rounded">
+    <img src="img/<%= img %>" alt="<%= title %> 이미지">
+  </div>
+  <h3><%= title %></h3>
 </div>
+<% } %>
+
+<% if (cardType === 5) { %>
+<div class="card w-50 p-relative">
+  <div class="border-rounded">
+    <img src="img/<%= img %>" alt="<%= title %> 이미지" class="">
+  </div>
+  <div class="p-absolute bottom-0">
+    <h3><%= title %></h3>
+  </div>
+</div>
+<% } %>

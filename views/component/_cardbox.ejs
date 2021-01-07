@@ -4,7 +4,7 @@
   cards: array of card
 }
 -->
-<div id="<%= id %>">
+<div id="<%= typeof id !== 'undefined' ? id : '' %>" class="cardbox">
   <% for (const card of cards) { %>
     <%- include('_card', card) %>
   <% } %>

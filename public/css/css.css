@@ -95,6 +95,11 @@ body {
   border-bottom: 1px solid #dadada;
 }
 
+.border-rounded {
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
 /*
 
   else
@@ -187,6 +192,17 @@ img {
   border-bottom: 1px solid #E6E6E6;
   padding: 1rem;
   margin-top: 0.75rem;
+}
+
+.cardbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -0.5rem;
+}
+
+.cardbox .card {
+  padding: 0 0.5rem;
 }
 
 .carousel {
