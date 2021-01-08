@@ -4,11 +4,23 @@
   title: string or undefined
   titleCount: integer or undefined
   noPadding: true or undefined
+  noMargin: true or undefined
   components: array of _
 }
 
 -->
-<div class="box <%= (typeof noPadding !== 'undefined' ? 'p-0' : '') %>">
+<%
+let boxStyle = ''
+
+if (typeof noPadding !== 'undefined') {
+  boxStyle += ' p-0'
+}
+
+if (typeof noMargin !== 'undefined') {
+  boxStyle += ' m-0'
+}
+%>
+<div class="box <%= boxStyle %>">
   <!-- header -->
   <% if (typeof title !== 'undefined') { %>
   <div class="d-flex">
