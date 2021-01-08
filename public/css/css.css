@@ -229,14 +229,43 @@ img {
 }
 
 .nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: auto;
   padding: 1.5rem 0;
   text-align: center;
-  border-bottom: 2px solid transparent;
+  border-bottom: transparent;
 }
 
-.nav-item[data-selected='true'] {
+.nav[data-nav-type="1"],
+.nav[data-nav-type="2"] {
+  border-bottom: 1px solid #eee;
+}
+
+.nav[data-nav-type="1"] .nav-item[data-selected="true"],
+.nav[data-nav-type="2"] .nav-item[data-selected="true"] {
   border-bottom: 2px solid #FFD500;
+}
+
+.nav[data-nav-type="4"] .nav-item {
+  padding: 1rem 0;
+}
+
+.nav[data-nav-type="4"] .nav-item > div {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50em;
+}
+
+.nav[data-nav-type="4"] .nav-item[data-selected="true"] > div {
+  background: #FFD500;
+}
+
+.nav[data-nav-type="2"] .nav-item[data-selected="false"],
+.nav[data-nav-type="3"] .nav-item[data-selected="false"],
+.nav[data-nav-type="4"] .nav-item[data-selected="false"] {
+  color: #999;
 }
 
 .box {

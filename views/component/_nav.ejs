@@ -15,12 +15,14 @@
   ]
 }
 -->
-<nav class="nav">
+<nav class="nav" data-nav-type="<%= navType %>">
   <ul class="nav-list">
     <% for (const { text, target, selected } of navList) { %>
     <li role="button" class="nav-item"
       data-nav="<%= navTitle %>" data-target="<%= target %>" data-selected="<%= selected %>">
-      <%= text %>
+      <div class="d-flex">
+        <%= text %>
+      </div>
     </li>
     <% } %>
   </ul>

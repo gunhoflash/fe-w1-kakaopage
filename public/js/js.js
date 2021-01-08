@@ -48,7 +48,7 @@ function initNavItems() {
 }
 
 function clickNavItem(e) {
-  selectNavItem(e.target)
+  selectNavItem(e.currentTarget)
 }
 
 function selectNavItem(navItem) {
