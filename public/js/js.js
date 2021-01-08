@@ -128,6 +128,7 @@ function showNextCarouselItem(carouselInfo, isReversed = false) {
     item.classList.remove('prev')
     item.classList.remove('active')
     item.classList.remove('next')
+    item.classList.remove('reverse')
   })
 
   // add prev/active/next class
