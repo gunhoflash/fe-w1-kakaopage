@@ -28,7 +28,7 @@ function show(str) {
   })
 }
 
-function hideOne(str) {
+function showOne(str) {
   findOne(str).classList.remove('d-none')
 }
 
