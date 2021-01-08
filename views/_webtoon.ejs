@@ -9,7 +9,7 @@
           type: 'nav',
           data: {
             navTitle: 'nav_webtoon',
-            navType: 2,
+            navType: 3,
             navList: [
               { text: '홈', target: '#section_webtoon_home', selected: true },
               { text: '요일연재', target: '#section_webtoon_daily', selected: false },
@@ -374,6 +374,7 @@
         {
           type: 'box',
           data: {
+            noPadding: true,
             components: [
               {
                 type: 'nav',
@@ -391,19 +392,36 @@
                     { text: '완결', target: '#cardbox_webtoon_daily_main .webtoon_daily_end', selected: false },
                   ]
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          type: 'box',
+          data: {
+            noPadding: true,
+            noMargin: true,
+            components: [
               {
                 type: 'nav',
                 data: {
                   navTitle: 'nav_webtoon_daily_type',
-                  navType: 4,
+                  navType: 3,
                   navList: [
                     { text: '전체', target: '#cardbox_webtoon_daily_main .card', selected: true },
                     { text: '웹툰', target: '#cardbox_webtoon_daily_main .card[data-webtoon-type="webtoon"]', selected: false },
                     { text: '(시계)웹툰', target: '#cardbox_webtoon_daily_main .card[data-webtoon-type="time"]', selected: false },
                   ]
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          type: 'box',
+          data: {
+            noMargin: true,
+            components: [
               {
                 type: 'cardbox',
                 data: {
@@ -471,6 +489,7 @@
         {
           type: 'box',
           data: {
+            noPadding: true,
             components: [
               {
                 type: 'nav',
@@ -488,7 +507,15 @@
                     { text: '전체', target: '#cardbox_webtoon_webtoon_main .card', selected: false },
                   ]
                 }
-              },
+              }
+            ]
+          }
+        },
+        {
+          type: 'box',
+          data: {
+            noMargin: true,
+            components: [
               {
                 type: 'cardbox',
                 data: {
