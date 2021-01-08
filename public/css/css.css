@@ -288,7 +288,80 @@ img {
 }
 
 .carousel {
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: none;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-left: -100%;
+}
+
+.carousel-item {
+  display: none;
+}
+
+.carousel-item.prev,
+.carousel-item.active,
+.carousel-item.next {
+  display: block;
+}
+
+/* carousel transition */
+.carousel-item {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0%);
+}
+.carousel-item.active:not(.reverse) {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+.carousel-item.next:not(.reverse) {
+  transition: none;
+  transform: translateX(200%);
+}
+
+/* carousel transition (reverse) */
+.carousel-item.prev.reverse {
+  transition: none;
+  transform: translateX(0%);
+}
+.carousel-item.active.reverse {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+.carousel-item.next.reverse {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(200%);
+}
+
+.carousel-button-prev {
+  left: 1rem;
+}
+.carousel-button-next {
+  right: 1rem;
+}
+.carousel-button-prev,
+.carousel-button-next {
+  width: 2rem;
+  height: 2rem;
+  margin: auto 0rem;
+  position: absolute;
+  border-radius: 50rem;
+  border: 1px solid #fff;
+  background-color: #0003;
+  color: #fff;
 }
 
 .quicklink {
