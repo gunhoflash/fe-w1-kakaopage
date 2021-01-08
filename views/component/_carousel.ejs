@@ -1,9 +1,24 @@
 <!--
 {
-  id
+  id: string
   carouselType: string
+    1: big carousel with card type 5
 }
 -->
-<div class="carousel">
-  <img src="img/carousel.png" alt="carousel" class="w-100">
+
+<!-- type 1 -->
+<div id="<%= id %>" class="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <img src="img/carousel_1.png" alt="carousel">
+    </div>
+    <div class="carousel-item">
+      <img src="img/carousel_2.png" alt="carousel">
+    </div>
+    <div class="carousel-item">
+      <img src="img/carousel_1.png" alt="carousel">
+    </div>
+  </div>
+  <button class="carousel-button-prev">&LT;</button>
+  <button class="carousel-button-next">&GT;</button>
 </div>
